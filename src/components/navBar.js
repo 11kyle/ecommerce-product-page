@@ -15,6 +15,7 @@ export default function NavBar() {
     setIsOpen(!isOpen);
   }
 
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
   const handleCartOpen = () => setIsCartOpen(true);
   const handleCartClose = () => setIsCartOpen(false);
 
@@ -66,7 +67,7 @@ export default function NavBar() {
       </div>
       <div className="relative flex items-center space-x-8">
         <a href="#">
-          <img className="h-[20px] w-[20px]" src={iconCart} alt="shopping cart" onClick={handleCartOpen} />
+          <img className="h-[20px] w-[20px]" src={iconCart} alt="shopping cart" onClick={toggleCart} />
         </a>
         {/* <ShoppingCart 
           open={isCartOpen}
@@ -78,9 +79,9 @@ export default function NavBar() {
       </div>
     
       <ShoppingCart 
-          open={isCartOpen}
-          handleClose={handleCartClose}
-        />
+        open={isCartOpen}
+        handleClose={handleCartClose}
+      />
       
     </header>
   );

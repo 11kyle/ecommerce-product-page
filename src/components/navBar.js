@@ -5,13 +5,18 @@ import iconClose from '../assets/icon-close.svg';
 import iconMenu from '../assets/icon-menu.svg';
 import avatar from '../assets/image-avatar.png';
 import logo from '../assets/logo.svg';
+import { ShoppingCart } from './shoppingCart';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
   }
+
+  const handleCartOpen = () => setIsCartOpen(true);
+  const handleCartClose = () => setIsCartOpen(false);
 
   // This is supposed to close the menu while in mobile but open it md: and above
   const handleResize = () => {
@@ -59,14 +64,24 @@ export default function NavBar() {
         }
         
       </div>
-      <div className="flex items-center space-x-8">
+      <div className="relative flex items-center space-x-8">
         <a href="#">
-          <img className="h-[20px] w-[20px]" src={iconCart} alt="shopping cart" />
+          <img className="h-[20px] w-[20px]" src={iconCart} alt="shopping cart" onClick={handleCartOpen} />
         </a>
+        {/* <ShoppingCart 
+          open={isCartOpen}
+          handleClose={handleCartClose}
+        /> */}
         <a className="rounded-full hover:border-2 hover:border-hslOrange w-[40px]" href="#">
           <img src={avatar} alt="profile" />
         </a>
       </div>
+    
+      <ShoppingCart 
+          open={isCartOpen}
+          handleClose={handleCartClose}
+        />
+      
     </header>
   );
 }

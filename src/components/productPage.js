@@ -13,6 +13,7 @@ import iconPlus from '../assets/icon-plus.svg';
 import iconMinus from '../assets/icon-minus.svg';
 import { useState } from 'react';
 import Modal from './modal';
+import { ShoppingCart } from './shoppingCart';
 
 const product = {
   name: "Fall Limited Edition Sneakers",

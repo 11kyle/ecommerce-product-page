@@ -13,7 +13,8 @@ module.exports = {
         'hslGrayishBlue': 'hsl(220, 14%, 75%)',
         'hslLightGrayihsBlue': 'hsl(223, 64%, 98%)',
         'hslWhite': 'hsl(0, 0%, 100%)',
-        'hslBlack': 'hsl(0, 0%, 0%)'
+        'hslBlack': 'hsl(0, 0%, 0%)',
+        'imageOverlay': 'rgba(255, 255, 255, 0.75)'
       },
     },
   },

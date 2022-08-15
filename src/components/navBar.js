@@ -29,7 +29,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header className="flex justify-between items-center bg-white py-4 md:py-10 mx-5 md:border-b-2">
+    <header className="flex justify-between items-center bg-white py-4 md:py-9 mx-5 md:border-b-2">
       <div className="flex h-[20px]">
         <button className="md:hidden mr-5" onClick={handleOpen}>
           <img src={iconMenu} alt="open menu" />
@@ -50,11 +50,11 @@ export default function NavBar() {
                 <img src={iconClose} alt="open menu" />
               </button>
             </li>
-            <li><a className="ml-6 mr-40 md:ml-0 md:mr-0" href="#">Collections</a></li>
-            <li><a className="ml-6 mr-40 md:ml-0 md:mr-0" href="#">Men</a></li>
-            <li><a className="ml-6 mr-40 md:ml-0 md:mr-0" href="#">Women</a></li>
-            <li><a className="ml-6 mr-40 md:ml-0 md:mr-0" href="#">About</a></li>
-            <li><a className="ml-6 mr-40 md:ml-0 md:mr-0" href="#">Contact</a></li>
+            <li><a className="text-hslBlack font-bold md:text-hslDarkGrayishBlue md:font-normal md:hover:text-hslBlack md:py-10 md:hover:border-b-4 md:hover:border-b-hslOrange ml-6 mr-40 md:ml-0 md:mr-0" href="#">Collections</a></li>
+            <li><a className="text-hslBlack font-bold md:text-hslDarkGrayishBlue md:font-normal md:hover:text-hslBlack md:py-10 md:hover:border-b-4 md:hover:border-b-hslOrange ml-6 mr-40 md:ml-0 md:mr-0" href="#">Men</a></li>
+            <li><a className="text-hslBlack font-bold md:text-hslDarkGrayishBlue md:font-normal md:hover:text-hslBlack md:py-10 md:hover:border-b-4 md:hover:border-b-hslOrange ml-6 mr-40 md:ml-0 md:mr-0" href="#">Women</a></li>
+            <li><a className="text-hslBlack font-bold md:text-hslDarkGrayishBlue md:font-normal md:hover:text-hslBlack md:py-10 md:hover:border-b-4 md:hover:border-b-hslOrange ml-6 mr-40 md:ml-0 md:mr-0" href="#">About</a></li>
+            <li><a className="text-hslBlack font-bold md:text-hslDarkGrayishBlue md:font-normal md:hover:text-hslBlack md:py-10 md:hover:border-b-4 md:hover:border-b-hslOrange ml-6 mr-40 md:ml-0 md:mr-0" href="#">Contact</a></li>
           </ol>
         }
         
@@ -63,8 +63,8 @@ export default function NavBar() {
         <a href="#">
           <img className="h-[20px] w-[20px]" src={iconCart} alt="shopping cart" />
         </a>
-        <a href="#">
-          <img className="w-[40px]" src={avatar} alt="profile" />
+        <a className="rounded-full hover:border-2 hover:border-hslOrange w-[40px]" href="#">
+          <img src={avatar} alt="profile" />
         </a>
       </div>
     </header>

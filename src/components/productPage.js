@@ -127,17 +127,17 @@ export default function ProductPage({ setItems }) {
 
         </div>
       </section>
-      <section className="mx-6 md:mt-4 lg:mt-16">
+      <section className="mx-6  md:place-self-center">
         <div>
           <h2 className="uppercase text-sm font-bold text-hslOrange my-4">Sneaker Company</h2>
           <h1 className="text-3xl font-bold md:text-4xl">{product.name}</h1>
           <p className="text-hslDarkGrayishBlue my-5">{product.description}</p>
         </div>
 
-        <div className="flex justify-start items-center">
+        <div className="flex md:flex-wrap justify-start items-center md:mb-5">
           <h1 className="font-bold text-3xl">$125.00</h1>
           <span className="font-bold text-hslOrange bg-hslPaleOrange rounded-md px-1 ml-2">50%</span>
-          <p className="line-through text-hslDarkGrayishBlue ml-auto">$250.00</p>
+          <p className="line-through text-hslDarkGrayishBlue ml-auto md:min-w-full">$250.00</p>
         </div>
 
         <div className="grid md:grid-cols-3 md:gap-2 md:py-3">

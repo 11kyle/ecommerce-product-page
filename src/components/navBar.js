@@ -7,7 +7,7 @@ import avatar from '../assets/image-avatar.png';
 import logo from '../assets/logo.svg';
 import { ShoppingCart } from './shoppingCart';
 
-export default function NavBar() {
+export default function NavBar({ items, removeItem }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -15,7 +15,7 @@ export default function NavBar() {
     setIsOpen(!isOpen);
   }
 
-  const toggleCart = () => setIsCartOpen(!isCartOpen);
+  const toggleCart = () => setIsCartOpen(!isCartOpen); // Remove once add handleCartOpen and handleCartClose logic
   const handleCartOpen = () => setIsCartOpen(true);
   const handleCartClose = () => setIsCartOpen(false);
 
@@ -81,6 +81,8 @@ export default function NavBar() {
       <ShoppingCart 
         open={isCartOpen}
         handleClose={handleCartClose}
+        items={items}
+        removeItem={removeItem}
       />
       
     </header>

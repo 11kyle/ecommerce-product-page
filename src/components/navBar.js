@@ -65,26 +65,22 @@ export default function NavBar({ items, removeItem }) {
         }
         
       </div>
-      <div className="relative flex items-center space-x-8">
-        <a href="#">
+      <div className="md:relative flex items-center space-x-8">
+        <a className="relative" href="#">
           <img className="h-[20px] w-[20px]" src={iconCart} alt="shopping cart" onClick={toggleCart} />
+
+          {items.length > 0 && <span className="absolute -top-1/4 -right-1/4 rounded-full h-3 w-3 bg-hslOrange"></span>}
         </a>
-        {/* <ShoppingCart 
+        <ShoppingCart 
           open={isCartOpen}
           handleClose={handleCartClose}
-        /> */}
+          items={items}
+          removeItem={removeItem}
+        />
         <a className="rounded-full hover:border-2 hover:border-hslOrange w-[40px]" href="#">
           <img src={avatar} alt="profile" />
         </a>
       </div>
-    
-      <ShoppingCart 
-        open={isCartOpen}
-        handleClose={handleCartClose}
-        items={items}
-        removeItem={removeItem}
-      />
-      
     </header>
   );
 }

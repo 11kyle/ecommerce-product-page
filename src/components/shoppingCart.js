@@ -14,12 +14,12 @@ export const ShoppingCart = ({ open, handleClose, items, removeItem }) => {
   return (
     <>
       {open && 
-        <div className="z-50 absolute top-20 right-0 mr-2 bg-hslWhite shadow-xl rounded-lg w-[97%] md:w-64">
+        <div className="z-50 fixed md:absolute top-20 md:top-16 right-2 md:right-0 bg-hslWhite shadow-xl rounded-lg w-[97%] md:w-72">
           <h1 className="font-bold pl-4 py-3 border-b-2">Cart</h1>
-          <div className="flex flex-col text-xs">
+          <div className="flex flex-col text-xs p-2">
             {items.length ? 
               <div className="m-3">
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between mb-4">
                   <img className="w-9 rounded-sm" src={product1Thumbnail} alt="show "/>
                   <div className="text-hslDarkGrayishBlue ml-2">
                     <p>Fall Limited Edition Sneakers</p>

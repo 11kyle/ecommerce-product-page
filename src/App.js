@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl h-screen mx-auto flex flex-col">
       <NavBar items={items} removeItem={removeItem} />
       <ProductPage setItems={setItems} />
       <Footer />

@@ -103,7 +103,7 @@ export default function ProductPage({ setItems }) {
   }
 
   return (
-    <main className="md:grid md:grid-cols-2 md:gap-x-6 lg:gap-x-20 md:mt-20 md:mx-10">
+    <main className="md:grid md:grid-cols-2 md:gap-x-6 lg:gap-x-20 md:mt-20 md:mx-10 mb-40">
       <section>
         <div className="relative">
             <img className="md:rounded-2xl pointer-events-none md:pointer-events-auto md:cursor-pointer" src={product.images[active].main} alt="shoe" onClick={handleOpen} />

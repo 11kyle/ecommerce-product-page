@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 
 import iconNext from '../assets/icon-next.svg';
 import iconPrevious from '../assets/icon-previous.svg';
@@ -22,18 +22,24 @@ const Modal = ({ active, setActive, handleActive, open, onClose, product }) => {
   //////////////////////////////////////////////////////
   // Refactor this because it is duplicate of the navBar
   //////////////////////////////////////////////////////
-  const handleResize = () => {
+//   const handleResize = () => {
+//     if (window.innerWidth < 768) {
+//       onClose();
+//     }
+//   }
+
+  const handleResize = useCallback(() => {
     if (window.innerWidth < 768) {
       onClose();
     }
-  }
+  }, [onClose]);
 
   useEffect(() => {
-
+    
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
     
-  }, []);
+  }, [handleResize]);
   //////////////////////////////////////////////////////
   // Refactor this because it is duplicate of the navBar
   //////////////////////////////////////////////////////
@@ -41,7 +47,7 @@ const Modal = ({ active, setActive, handleActive, open, onClose, product }) => {
   return (
     <>
       {open && 
-        <div id="modal-container" className="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm flex justify-center items-center">
+        <div id="modal-container" className="z-50 fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm flex justify-center items-center">
 
 
           
